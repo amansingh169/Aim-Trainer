@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Osu</title>
+  </head>
+  <body>
+    <div class="diff-area">
+      <h1>Difficulty Settings</h1>
+
+      <div class="size-slider">
+        <h2>Select Target Size</h2>
+        <input
+          type="range"
+          min="10"
+          max="130"
+          value="70"
+          name="size"
+          id="size"
+          step="20"
+          list="size-ticks"
+        />
+      </div>
+
+      <div class="speed-slider">
+        <h2>Select Target Speed</h2>
+        <input type="range" min="0" max="10" value="5" name="speed" id="speed" step="1" />
+      </div>
+
+      <div class="auto-clicker" style="margin-bottom: 20px">
+        <label for="auto">Auto Clicker</label>
+        <input style="width: 17px; height: 17px" type="checkbox" name="auto" id="auto" />
+      </div>
+
+      <input value="Save" type="button" name="save" id="save-btn" />
+    </div>
+
+    <div class="hit-area">
+      <div class="circle hit-circle">
+        <div class="circle hit-circle-inner"></div>
+      </div>
+
+      <audio id="hit-sound" src="drum-hitnormal.ogg"></audio>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
